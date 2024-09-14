@@ -1,14 +1,10 @@
-<template>
-  <div>Hello {{ value }}</div>
-</template>
-
-<script>
-export default {
-  name: "App",
-  data() {
-    return {
-      value: "World"
-    };
-  }
-};
+<script setup lang="ts">
+import UpgradeToPro from '@/components/UpgradeToPro.vue'
 </script>
+
+<template>
+  <VApp>
+    <RouterView />
+    <UpgradeToPro />
+  </VApp>
+</template>
