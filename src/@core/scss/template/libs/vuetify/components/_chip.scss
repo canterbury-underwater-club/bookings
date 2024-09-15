@@ -14,7 +14,7 @@
     }
   }
 
-  &:not([class*="text-"]) {
+  &:not([class*='text-']) {
     --v-activated-opacity: 0.08;
   }
 

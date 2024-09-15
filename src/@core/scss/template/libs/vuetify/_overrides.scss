@@ -1,5 +1,5 @@
-@use "@core/scss/base/utils";
-@use "@configured-variables" as variables;
+@use '@core/scss/base/utils';
+@use '@configured-variables' as variables;
 
 //  Body
 // set body font size 15px
@@ -19,7 +19,7 @@ body {
   color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
 }
 
-.text-caption{
+.text-caption {
   color: rgba(var(--v-theme-on-background), var(--v-disabled-opacity));
 }
 
@@ -30,8 +30,8 @@ body {
 }
 
 //  Input placeholder alignment
-.v-input--density-compact{
-  input::placeholder { 
+.v-input--density-compact {
+  input::placeholder {
     position: relative;
     inset-block-start: 1px;
   }

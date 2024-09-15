@@ -1,4 +1,4 @@
-@use "sass:string";
+@use 'sass:string';
 
 /*
   ℹ️ This function is helpful when we have multi dimensional value
@@ -27,14 +27,10 @@
   ```
 */
 @function get-first-value($var) {
-  $start-at: string.index(#{$var}, " ");
+  $start-at: string.index(#{$var}, ' ');
 
   @if $start-at {
-    @return string.slice(
-      #{$var},
-      0,
-      $start-at
-    );
+    @return string.slice(#{$var}, 0, $start-at);
   } @else {
     @return $var;
   }

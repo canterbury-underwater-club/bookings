@@ -57,23 +57,19 @@ export const iconify = {
     if (typeof props.icon === 'string') {
       const iconComponent = customIcons[props.icon]
 
-      if (iconComponent)
-        return h(iconComponent)
+      if (iconComponent) return h(iconComponent)
     }
 
-    return h(
-      props.tag,
-      {
-        ...props,
+    return h(props.tag, {
+      ...props,
 
-        // As we are using class based icons
-        class: [props.icon],
+      // As we are using class based icons
+      class: [props.icon],
 
-        // Remove used props from DOM rendering
-        tag: undefined,
-        icon: undefined,
-      },
-    )
+      // Remove used props from DOM rendering
+      tag: undefined,
+      icon: undefined,
+    })
   },
 }
 

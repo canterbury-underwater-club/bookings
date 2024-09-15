@@ -1,8 +1,8 @@
-@use "@configured-variables" as variables;
-@use "sass:map";
-@use "@styles/variables/vuetify";
-@use "@core/scss/base/mixins";
-@use "@core/scss/base/utils";
+@use '@configured-variables' as variables;
+@use 'sass:map';
+@use '@styles/variables/vuetify';
+@use '@core/scss/base/mixins';
+@use '@core/scss/base/utils';
 
 //  VField
 // Override Vuetify's default outline color for text fields to match the theme
@@ -10,7 +10,7 @@
 .v-field__outline {
   color: rgba(var(--v-theme-on-surface));
 
-  &:not([class*="text-"]) .v-label {
+  &:not([class*='text-']) .v-label {
     color: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity));
   }
 }

@@ -1,4 +1,4 @@
-@use "vuetify/lib/styles/settings" as vuetify_settings;
+@use 'vuetify/lib/styles/settings' as vuetify_settings;
 
 @mixin avatar-font-sizes($map: $avatar-sizes) {
   @each $sizeName, $multiplier in vuetify_settings.$size-scales {

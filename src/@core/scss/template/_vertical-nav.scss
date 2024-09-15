@@ -1,10 +1,10 @@
-@use "@layouts/styles/mixins" as layoutsMixins;
+@use '@layouts/styles/mixins' as layoutsMixins;
 
 .layout-nav-type-vertical {
   //  Layout Vertical nav
   .layout-vertical-nav {
-    .nav-items{
-      padding-block-start: .25rem;
+    .nav-items {
+      padding-block-start: 0.25rem;
     }
 
     //  Vertical nav group
@@ -45,7 +45,7 @@
   }
 }
 
-//   Overlay 
-.layout-overlay{
+//   Overlay
+.layout-overlay {
   touch-action: none;
 }
