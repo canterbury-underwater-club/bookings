@@ -21,7 +21,7 @@ defineProps<{
         :icon="item.icon || 'ri-checkbox-blank-circle-line'"
         class="nav-item-icon"
       />
-      <!-- 👉 Title -->
+      <!--  Title -->
       <span class="nav-item-title">
         {{ item.title }}
       </span>

@@ -8,9 +8,7 @@ import tree from '@images/pages/tree.png'
 const vuetifyTheme = useTheme()
 
 const authThemeMask = computed(() => {
-  return vuetifyTheme.global.name.value === 'light'
-    ? miscMaskLight
-    : miscMaskDark
+  return vuetifyTheme.global.name.value === 'light' ? miscMaskLight : miscMaskDark
 })
 </script>
 
@@ -22,7 +20,7 @@ const authThemeMask = computed(() => {
       description="We couldn't find the page you are looking for."
     />
 
-    <!-- 👉 Image -->
+    <!--  Image -->
     <div class="misc-avatar w-100 text-center">
       <VImg
         :src="misc404"
@@ -38,7 +36,7 @@ const authThemeMask = computed(() => {
       </VBtn>
     </div>
 
-    <!-- 👉 Footer -->
+    <!--  Footer -->
     <VImg
       :src="tree"
       class="misc-footer-tree d-none d-md-block"
@@ -52,7 +50,7 @@ const authThemeMask = computed(() => {
 </template>
 
 <style lang="scss">
-@use "@core/scss/template/pages/misc.scss";
+@use '@core/scss/template/pages/misc.scss';
 
 .misc-footer-tree {
   inline-size: 15.625rem;

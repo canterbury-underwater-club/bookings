@@ -3,7 +3,7 @@
 @use "sass:map";
 @use "@configured-variables" as variables;
 
-/* 👉 Button
+/*  Button
  Above map but opacity values as key and variant as value */
 
 body {
@@ -260,7 +260,7 @@ body {
     }
   }
 
-  // 👉 Btn group
+  //  Btn group
   .v-btn-group {
     border: none;
 

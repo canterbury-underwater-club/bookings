@@ -16,32 +16,28 @@ export default defineComponent({
     syncRef(isOverlayNavActive, isLayoutOverlayVisible)
 
     return () => {
-      // 👉 Vertical nav
+      //  Vertical nav
       const verticalNav = h(
         VerticalNav,
         { isOverlayNavActive: isOverlayNavActive.value, toggleIsOverlayNavActive },
         {
           'nav-header': () => slots['vertical-nav-header']?.({ toggleIsOverlayNavActive }),
           'before-nav-items': () => slots['before-vertical-nav-items']?.(),
-          'default': () => slots['vertical-nav-content']?.(),
+          default: () => slots['vertical-nav-content']?.(),
           'after-nav-items': () => slots['after-vertical-nav-items']?.(),
         },
       )
 
-      // 👉 Navbar
-      const navbar = h(
-        'header',
-        { class: ['layout-navbar navbar-blur'] },
-        [
-          h(
-            'div',
-            { class: 'navbar-content-container' },
-            slots.navbar?.({
-              toggleVerticalOverlayNavActive: toggleIsOverlayNavActive,
-            }),
-          ),
-        ],
-      )
+      //  Navbar
+      const navbar = h('header', { class: ['layout-navbar navbar-blur'] }, [
+        h(
+          'div',
+          { class: 'navbar-content-container' },
+          slots.navbar?.({
+            toggleVerticalOverlayNavActive: toggleIsOverlayNavActive,
+          }),
+        ),
+      ])
 
       const main = h(
         'main',
@@ -49,27 +45,18 @@ export default defineComponent({
         h('div', { class: 'page-content-container' }, slots.default?.()),
       )
 
-      // 👉 Footer
-      const footer = h(
-        'footer',
-        { class: 'layout-footer' },
-        [
-          h(
-            'div',
-            { class: 'footer-content-container' },
-            slots.footer?.(),
-          ),
-        ],
-      )
+      //  Footer
+      const footer = h('footer', { class: 'layout-footer' }, [
+        h('div', { class: 'footer-content-container' }, slots.footer?.()),
+      ])
 
-      // 👉 Overlay
-      const layoutOverlay = h(
-        'div',
-        {
-          class: ['layout-overlay', { visible: isLayoutOverlayVisible.value }],
-          onClick: () => { isLayoutOverlayVisible.value = !isLayoutOverlayVisible.value },
+      //  Overlay
+      const layoutOverlay = h('div', {
+        class: ['layout-overlay', { visible: isLayoutOverlayVisible.value }],
+        onClick: () => {
+          isLayoutOverlayVisible.value = !isLayoutOverlayVisible.value
         },
-      )
+      })
 
       return h(
         'div',
@@ -80,19 +67,7 @@ export default defineComponent({
             route.meta.layoutWrapperClasses,
           ],
         },
-        [
-          verticalNav,
-          h(
-            'div',
-            { class: 'layout-content-wrapper' },
-            [
-              navbar,
-              main,
-              footer,
-            ],
-          ),
-          layoutOverlay,
-        ],
+        [verticalNav, h('div', { class: 'layout-content-wrapper' }, [navbar, main, footer]), layoutOverlay],
       )
     }
   },
@@ -100,9 +75,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@use "@configured-variables" as variables;
-@use "@layouts/styles/placeholders";
-@use "@layouts/styles/mixins";
+@use '@configured-variables' as variables;
+@use '@layouts/styles/placeholders';
+@use '@layouts/styles/mixins';
 
 .layout-wrapper.layout-nav-type-vertical {
   // TODO(v2): Check why we need height in vertical nav & min-height in horizontal nav
@@ -154,12 +129,12 @@ export default defineComponent({
     @extend %layout-navbar-hidden;
   }
 
-  // 👉 Footer
+  //  Footer
   .layout-footer {
     @include mixins.boxed-content;
   }
 
-  // 👉 Layout overlay
+  //  Layout overlay
   .layout-overlay {
     position: fixed;
     z-index: variables.$layout-overlay-z-index;
@@ -182,7 +157,7 @@ export default defineComponent({
     padding-inline-start: variables.$layout-vertical-nav-collapsed-width;
   }
 
-  // 👉 Content height fixed
+  //  Content height fixed
   &.layout-content-height-fixed {
     .layout-content-wrapper {
       max-block-size: 100dvh;

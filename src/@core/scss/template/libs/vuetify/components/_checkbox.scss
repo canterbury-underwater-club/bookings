@@ -3,7 +3,7 @@
 @use "@styles/variables/vuetify";
 @use "@configured-variables" as variables;
 
-// 👉 checkbox box shadow
+//  checkbox box shadow
 .v-checkbox-btn {
   &.v-selection-control--dirty {
     .v-selection-control__input {

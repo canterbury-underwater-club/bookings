@@ -5,12 +5,12 @@ export interface AclProperties {
   subject: string
 }
 
-// 👉 Vertical nav section title
+//  Vertical nav section title
 export interface NavSectionTitle extends Partial<AclProperties> {
   heading: string
 }
 
-// 👉 Vertical nav link
+//  Vertical nav link
 declare type ATagTargetAttrValues = '_blank' | '_self' | '_parent' | '_top' | 'framename'
 declare type ATagRelAttrValues =
   | 'alternate'
@@ -42,7 +42,7 @@ export interface NavLink extends NavLinkProps, Partial<AclProperties> {
   disable?: boolean
 }
 
-// 👉 Vertical nav group
+//  Vertical nav group
 export interface NavGroup extends Partial<AclProperties> {
   title: string
   icon?: unknown
@@ -52,7 +52,7 @@ export interface NavGroup extends Partial<AclProperties> {
   disable?: boolean
 }
 
-// 👉 Components ========================
+//  Components ========================
 export interface ThemeSwitcherTheme {
   name: string
   icon: string
